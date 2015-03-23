@@ -1,6 +1,6 @@
 # docker-nginx
 
-Website served by Nginx inside an Alpine Docker container
+Minimalist Nginx image based on Alpine linux (6 MB)
 
 ## Setup
 
