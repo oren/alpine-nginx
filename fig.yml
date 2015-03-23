@@ -1,0 +1,6 @@
+nginx:
+  build: .
+  volumes:
+   - ./websie:/usr/share/nginx/html
+  ports:
+   - "3000:80"
