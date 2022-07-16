@@ -1,0 +1,22 @@
+server {
+    listen 80;
+    server_name router.kuzmich.xyz;
+#    access_log /var/log/nginx/router.kuzmich.xyz-access.log;
+#    error_log /var/log/nginx/router.kuzmich.xyz-error.log;
+
+location / {
+    proxy_pass http://192.168.1.1:81;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Real-IP $remote_addr;
+#    auth_basic           "Administrator’s Area";
+#    auth_basic_user_file /etc/nginx/.htpasswd; 
+}
+
+#    listen 443 ssl; # managed by Certbot
+#    ssl_certificate /etc/letsencrypt/live/plex.kuzmich.xyz/fullchain.pem; # managed by Certbot
+#    ssl_certificate_key /etc/letsencrypt/live/plex.kuzmich.xyz/privkey.pem; # managed by Certbot
+#    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+#    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
