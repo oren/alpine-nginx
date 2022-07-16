@@ -11,6 +11,6 @@ COPY nginx/.htpasswd /etc/nginx/.htpasswd
 COPY website /usr/share/nginx/html
 
 RUN mkdir -p /etc/nginx/sites-enabled
-COPY nginx/sites-enabled /etc/nginx/sites-enabled
+COPY nginx/sites-enabled/router.kuzmich.xyz /etc/nginx/sites-enabled/router.kuzmich.xyz
 
 CMD ["nginx", "-g", "daemon off;"]
