@@ -10,7 +10,7 @@ RUN apk --no-cache update && \
 	apk add --no-cache \
 	nginx \
 	bash \
-	openssh
+#	openssh
 #	certbot
 
 ### Remove cache and tmp data
@@ -41,5 +41,7 @@ EXPOSE 443
 
 #ENTRYPOINT ["/docker-entrypoint.sh"]
 #CMD ["certbot"]
+
+#ENTRYPOINT ["sh", "-c", "nginx"]
 
 CMD ["nginx", "-g", "daemon off;"]

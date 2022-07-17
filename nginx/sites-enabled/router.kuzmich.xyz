@@ -1,6 +1,7 @@
 server {
     listen 80;
     server_name router.kuzmich.xyz;
+    
 #    access_log /var/log/nginx/router.kuzmich.xyz-access.log;
     error_log /var/log/nginx/router.kuzmich.xyz-error.log;
 
