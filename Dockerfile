@@ -9,7 +9,7 @@ ENV LANG='en_US.UTF-8' \
 RUN apk --no-cache update && \
 	apk add --no-cache \
 	nginx \
-	bash \
+	bash
 #	openssh
 #	certbot
 
@@ -30,7 +30,7 @@ COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY nginx/.htpasswd /etc/nginx/.htpasswd
 COPY website /usr/share/nginx/html
-COPY nginx/sites-enabled/router.kuzmich.xyz /etc/nginx/sites-enabled/router.kuzmich.xyz
+COPY nginx/sites-enabled /etc/nginx/sites-enabled
 
 ### Expose ports
 EXPOSE 80
